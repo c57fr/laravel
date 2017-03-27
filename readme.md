@@ -18,6 +18,7 @@ N.B.: Sous linux, donner les **droits en écriture aux  fichiers et dossiers con
 ## 3/ composer update
 (Au besoin: https://getcomposer.org/)
 ## 4/ Copier .env.example en .env
+(Dans la racine)
 ## 5/ php artisan key:generate
 ## ===> Avec votre navigateur, visiter le dossier correspondant
  (*En principe:* http://localhost/laravel/public )
