@@ -13,11 +13,11 @@
     <!-- Styles -->
     <style>
         html, body {
-            background-color: #fff;
+            background-color: cornsilk;
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
+            font-weight: 400;
+            height: 700vh;
             margin: 0;
         }
 
@@ -62,6 +62,11 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+        .content > p {
+            font-family: arial;
+            font-weight: 300;
+            color:#777;
+        }
     </style>
 </head>
 <body>
@@ -79,7 +84,9 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Laravel 5.4 - Gc7
+            Laravel 5.4<br />
+            ---<br />
+            C57.fr
         </div>
 
         <div class="links">
@@ -89,6 +96,8 @@
             <a href="https://forge.laravel.com">Forge</a>
             <a href="https://github.com/laravel/laravel">GitHub</a>
         </div>
+        <p class="links">Dépôt Git: <a href="https://github.com/c57fr/laravel" title="Ouverture du dépôt Git
+  dans un autre onglet" target="_blank">https://github.com/c57fr/laravel</p>
     </div>
 </div>
 </body>
