@@ -30,7 +30,7 @@ N.B.: Sous linux, donner les **droits en écriture aux  fichiers et dossiers con
 - https://www.grafikart.fr/formations/laravel/routes
 
 ## Outils conseillés
-- SublimeText3
+- SublimeText 3
 - ungit
 
 ##### -------------------------------------------------------------------------------------------------------------------------------------------------
