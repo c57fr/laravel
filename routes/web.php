@@ -64,3 +64,7 @@ Route::get('salut/{name}', function ($name) {
 // as => nom de la route
 
 // Autre que get: post, put, delete
+
+Route::get('test', function () {
+    return 'Je suis une page de test';
+})-> name ('test');
