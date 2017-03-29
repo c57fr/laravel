@@ -1,4 +1,5 @@
 <?php
+// die('Ok');
 
 /**
  * Laravel - A PHP Framework For Web Artisans
