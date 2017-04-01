@@ -97,7 +97,7 @@
             <a href="https://github.com/laravel/laravel">GitHub</a>
         </div>
         <p class="links">Dépôt Git: <a href="https://github.com/c57fr/laravel" title="Ouverture du dépôt Git
-  dans un autre onglet" target="_blank">https://github.com/c57fr/laravel</p>
+  dans un autre onglet">https://github.com/c57fr/laravel</p>
     </div>
 </div>
 </body>
