@@ -86,7 +86,7 @@
         <div class="title m-b-md">
             Laravel 5.4<br />
             ---<br />
-            C57.fr
+            laravel.C57.fr
         </div>
 
         <div class="links">
