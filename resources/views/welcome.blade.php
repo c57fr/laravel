@@ -62,15 +62,17 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
         .content > p {
             font-family: arial;
             font-weight: 300;
-            color:#777;
+            color: #777;
         }
     </style>
 </head>
 <body>
 <div class="flex-center position-ref full-height">
+
     @if (Route::has('login'))
         <div class="top-right links">
             @if (Auth::check())
@@ -84,9 +86,9 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Laravel 5.4<br />
-            ---<br />
-            laravel.C57.fr
+            Laravel 5.4<br/>
+            ---<br/>
+            <a href="http://c57.fr">laravel.c57.fr</a>
         </div>
 
         <div class="links">
