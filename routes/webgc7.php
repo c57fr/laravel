@@ -12,24 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-    
-    Route::get('ok', function () {
-        return 'Oki';
-    });
-    
-    Route::get('', function () {
-        return 'Ajouter "/ok" à l\'URL';
-    });
-    
+
+  Route::get('ok', function () {
+    return 'Oki';
+  });
+
+  Route::get('', function () {
+    return 'Ajouter "/ok" à l\'URL';
+  });
+
 });
 
 
 Route::get('salut', function () {
-    return 'Salut les gens ! (GA)';
+  return 'Salut les gens ! (GA)';
 });
 
 // Fonctionne   http://laravel/salut/slug-marc-1
@@ -40,16 +40,16 @@ Route::get('salut/slug-{name}-{id}', function ($slug, $id) {
 Maintenant, essai sans slug dans la route
 */
 Route::get('salut/{slug}-{id}', ['as' => 'salut', function ($slug, $id) {
-    //  return ('Lien: /salut/' . $slug . '-' . $id );
-    
-    // Comme route nommée avec as:
-    return ('Lien: ' . route('salut', ['slug' => 'le-lien-est-' . $slug, 'id' => $id]));
-    
+  //  return ('Lien: /salut/' . $slug . '-' . $id );
+
+  // Comme route nommée avec as:
+  return ('Lien: ' . route('salut', ['slug' => 'le-lien-est-' . $slug, 'id' => $id]));
+
 }])->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
 
 
 Route::get('salut/{name}', function ($name) {
-    return ('Salut, ' . ucfirst($name) . ' !');
+  return ('Salut, ' . ucfirst($name) . ' !');
 });
 
 
@@ -64,7 +64,3 @@ Route::get('salut/{name}', function ($name) {
 // as => nom de la route
 
 // Autre que get: post, put, delete
-
-Route::get('test', function () {
-    return 'Je suis une page de test';
-})-> name ('test');
