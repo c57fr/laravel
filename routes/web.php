@@ -12,6 +12,11 @@
 |
 */
 
+if (1 || App::environment('remote')) {
+}
+
+URL::forceScheme('https');
+
 Route::get('/', function () {
   return view('welcome');
 });
