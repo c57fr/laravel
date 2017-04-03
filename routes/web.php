@@ -13,9 +13,10 @@
 */
 
 if (1 || App::environment('remote')) {
+  echo 'Parfait ! Site sécurisé !<hr>';
+  //URL::forceScheme('https');
 }
 
-URL::forceScheme('https');
 
 Route::get('/', function () {
   return view('welcome');
