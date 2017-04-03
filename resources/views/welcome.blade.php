@@ -22,7 +22,7 @@
         }
 
         .full-height {
-            height: 100vh;
+            height: 70vh;
         }
 
         .flex-center {
@@ -59,6 +59,14 @@
             text-transform: uppercase;
         }
 
+        a:hover {
+            color: red;
+        }
+
+        .links.ext a:hover {
+            background-color: yellow;
+        }
+
         .m-b-md {
             margin-bottom: 30px;
         }
@@ -85,21 +93,22 @@
     @endif
 
     <div class="content">
-        <div class="title m-b-md">
-            Laravel 5.4<br/>
-            ---<br/>
-            <a href="http://c57.fr">laravel.c57.fr</a>
+
+        <div class="title m-b-md links ext">
+            Laravel 5.4
+            <br/>
+            <a href="http://laravel.c57.fr" target="_blank">laravel.c57.fr</a>
         </div>
 
-        <div class="links">
-            <a href="https://laravel.com/docs">Documentation</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
+        <div class="links ext">
+            <a href="https://laravel.com/docs" target="_blank">Documentation</a>
+            <a href="https://laracasts.com" target="_blank">Laracasts</a>
+            <a href="https://laravel-news.com" target="_blank">News</a>
+            <a href="https://forge.laravel.com" target="_blank">Forge</a>
         </div>
-        <p class="links">Dépôt Git: <a href="https://github.com/c57fr/laravel" title="Ouverture du dépôt Git
-  dans un autre onglet">https://github.com/c57fr/laravel</p>
+        <hr/>
+        <p class="links ext">Dépôt Git: <a href="https://github.com/c57fr/laravel" title="Ouverture du dépôt Git
+  dans un autre onglet" target="_blank">https://github.com/c57fr/laravel</p>
     </div>
 </div>
 </body>
