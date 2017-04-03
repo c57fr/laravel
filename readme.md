@@ -23,6 +23,7 @@ N.B.: Sous linux, donner les **droits en écriture aux  fichiers et dossiers con
 ## ===> Avec votre navigateur, visiter le dossier correspondant
  (*En principe:* http://localhost/laravel/public )
 
+N.B.: Pour activer SSL, décommenter les 2 lignes qui suivent " # Force SSL " dans le .htaccess de la racine (En ce cas, faites pointer votre virtual host local directement dans public/).
 
 
 # Début de l'étude recommandé:
