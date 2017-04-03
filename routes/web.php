@@ -1,4 +1,5 @@
 <?php
+//Cache::flush();
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'adomin', 'middleware' => 'auth'], function () {
 
   Route::get('ok', function () {
     return 'Oki';
@@ -74,10 +75,10 @@ Route::get('test1', function () {
 
 // Différentes façons d'envoyer un paramètre à une vue
 
-Route::get('artcile/{n}', function ($n) {
+Route::get('article/{n}', function ($n) {
   //  return view('documents/article')->with('numero', $n);
-  //  return view('documents/article')->withNumero($n);
-  return view('documents/article', ['numero' => $n]);
+  //  return view('documents/article', ['numero' => $n]);
+  return view('documents/article')->withNumero($n);
 })->where('n', '[0-9]+');
 
 
