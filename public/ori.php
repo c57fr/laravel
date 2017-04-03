@@ -1,5 +1,4 @@
 <?php
-// die('Ok 21');
 
 /**
  * Laravel - A PHP Framework For Web Artisans
@@ -20,7 +19,7 @@
 |
 */
 
-require __DIR__ . '/../bootstrap/autoload.php';
+require __DIR__.'/../bootstrap/autoload.php';
 
 /*
 |--------------------------------------------------------------------------

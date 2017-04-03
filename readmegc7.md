@@ -13,12 +13,11 @@
 # Installation
  En mode console, dans votre dossier www de votre serveur local (wamp, lampp, etc....) :
 ## 1/ git clone https://github.com/c5fr/laravel
-N.B.: Sous linux, donner les **droits en écriture aux  fichiers et dossiers contenus dans le dossier storage**
+N.B.: Sous linux, donner les **droits en écriture aux  fichiers et dossiers contenus dans le dossiers storage**
 ## 2/ cd laravel
 ## 3/ composer update
 (Au besoin: https://getcomposer.org/)
-## 4/ Copier .env.example en .env
-(Dans la racine)
+## 4/ Copier .env.example en .env et le configurer
 ## 5/ php artisan key:generate
 ## ===> Avec votre navigateur, visiter le dossier correspondant
  (*En principe:* http://localhost/laravel/public )
@@ -30,7 +29,7 @@ N.B.: Sous linux, donner les **droits en écriture aux  fichiers et dossiers con
 - https://www.grafikart.fr/formations/laravel/routes
 
 ## Outils conseillés
-- SublimeText 3
+- SublimeText3
 - ungit
 
 ##### -------------------------------------------------------------------------------------------------------------------------------------------------

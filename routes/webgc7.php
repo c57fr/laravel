@@ -1,5 +1,4 @@
 <?php
-//Cache::flush();
 
 /*
 |--------------------------------------------------------------------------
@@ -12,13 +11,11 @@
 |
 */
 
-//URL::forceScheme('https');
-
 Route::get('/', function () {
   return view('welcome');
 });
 
-Route::group(['prefix' => 'adomin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
   Route::get('ok', function () {
     return 'Oki';
@@ -67,23 +64,3 @@ Route::get('salut/{name}', function ($name) {
 // as => nom de la route
 
 // Autre que get: post, put, delete
-
-Route::get('test1', function () {
-  //    return 'Je suis une page de test'; // Retourne une chaîne
-  //    return [1,2,3]; // Retourne du JSON
-  //  return response('un test', 206)->header('Content-Type', 'text/plain'); // Retourne un code partiel
-  return view('vue1');
-})->name('test');
-
-// Différentes façons d'envoyer un paramètre à une vue
-
-Route::get('article/{n}', function ($n) {
-  //  return view('documents/article')->with('numero', $n);
-  //  return view('documents/article', ['numero' => $n]);
-  return view('documents/article')->withNumero($n);
-})->where('n', '[0-9]+');
-
-
-Route::get('facture/{n}', function ($n) {
-  return view('documents/facture')->withNumero($n);
-})->where('n', '[0-9]+');
