@@ -18,7 +18,7 @@
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 400;
-            height: 700vh;
+            height: 70vh;
             margin: 0;
         }
 
@@ -60,16 +60,26 @@
             text-transform: uppercase;
         }
 
+        a {
+            transition: 5s;
+        }
+
         a:hover {
             color: red;
+            background-color: yellow;
+            transition: .7s;
+            cursor: pointer;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
         }
 
         .links.ext a:hover {
-            background-color: yellow;
+            background-color: cyan;
         }
 
         .m-b-md {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
 
         .content > p {
@@ -77,9 +87,32 @@
             font-weight: 300;
             color: #777;
         }
+
+        .c57back {
+            margin: 20px;
+            font-weight: 800;
+            color: red;
+            text-decoration: none;
+        }
+
+        .c57back a {
+            text-decoration: none;
+        }
+
+        .lien {
+            color: blue;
+            font-size: .5em;
+            font-style: italic;
+        }
+
     </style>
 </head>
 <body>
+
+<div class="c57back">
+    <a href="javascript:history.back()">c57.fr</a>
+</div>
+
 <div class="flex-center position-ref full-height">
 
     @if (Route::has('login'))
@@ -93,12 +126,16 @@
         </div>
     @endif
 
+
     <div class="content">
 
         <div class="title m-b-md links ext">
             Laravel 5.4
-            <br/>
-            <a href="http://laravel.c57.fr" target="_blank">laravel.c57.fr</a>
+
+            <div class="lien">
+                laravel.c57.fr
+            </div>
+
         </div>
 
         <div class="links ext">
@@ -108,8 +145,8 @@
             <a href="https://forge.laravel.com" target="_blank">Forge</a>
         </div>
         <hr/>
-        <p class="links ext">Dépôt Git: <a href="https://github.com/c57fr/laravel" title="Ouverture du dépôt Git
-  dans un autre onglet" target="_blank">https://github.com/c57fr/laravel</a></p>
+        <p class="links">Dépôt Git: <a href="https://github.com/c57fr/laravel" title="Ouverture du dépôt Git
+  dans un autre onglet">https://github.com/c57fr/laravel</a></p>
     </div>
 </div>
 
