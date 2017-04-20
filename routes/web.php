@@ -54,8 +54,7 @@ Route::get('salut/{slug}-{id}', ['as' => 'salut',
                                  }])->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
 
 
-Route::get('salut/{name}', 'HelloController@hello')
-->name('hello');
+Route::get('salut/{name}', 'HelloController@hello')->name('hello');
 
 
 // Là où j'en suis... (Lionel)
@@ -89,3 +88,5 @@ Route::get('article/{n}', function ($n) {
 Route::get('facture/{n}', function ($n) {
   return view('documents/facture')->withNumero($n);
 })->where('n', '[0-9]+');
+
+Route::get('posts', 'PostController@index')->name('posts.index');
