@@ -139,7 +139,7 @@
 
             <div class="lien">
                 laravel.c57.fr<br/>
-                <a href="salut/lionel" class="pad10">Hello</a>
+                <a href="/salut/lionel" class="pad10">Hello</a>
             </div>
 
         </div>
