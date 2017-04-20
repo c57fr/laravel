@@ -11,7 +11,8 @@
             <li>
                 {{--<h2>{{$post->name}}</h2>--}}
                 {{--<p>{{$post->content}}</p>--}}
-                {{$post->id}} - {{$post->name}}
+                {{$post->name}}
+                <a href=" {{ route('posts.edit', $post->id) }}">Editer</a>
             </li>
         @endforeach
     </ul>
