@@ -9,7 +9,7 @@ class PostController extends Controller {
 
   public function index() {
 
-    $posts = Post::all();
+    $posts = Post::orderBy('name')->get();
     // Equivaut à: $posts = (new Post())->newQuery()->get(['*']);
     return view('posts/index', ['posts' => $posts]);
   }

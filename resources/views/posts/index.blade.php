@@ -11,16 +11,14 @@
             <li>
                 {{--<h2>{{$post->name}}</h2>--}}
                 {{--<p>{{$post->content}}</p>--}}
-                {{$post->name}}
+                {{$post->id}} - {{$post->name}}
             </li>
         @endforeach
     </ul>
 
 
     <form action="{{ route('posts.index') }}" method="POST">
-
         {{csrf_field()}}
-
         <div class="form-group">
             <input type="text" name="name" class="form-control" placeholder="Titre de l'article">
         </div>
