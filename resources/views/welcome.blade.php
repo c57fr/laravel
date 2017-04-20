@@ -62,6 +62,7 @@
 
         a {
             transition: 5s;
+            text-decoration: none;
         }
 
         a:hover {
@@ -69,9 +70,13 @@
             background-color: yellow;
             transition: .7s;
             cursor: pointer;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+        }
+
+        .pad10 {
+            padding: 0 10px;
         }
 
         .links.ext a:hover {
@@ -133,7 +138,8 @@
             Laravel 5.4
 
             <div class="lien">
-                laravel.c57.fr
+                laravel.c57.fr<br/>
+                <a href="salut/lionel" class="pad10">Hello</a>
             </div>
 
         </div>

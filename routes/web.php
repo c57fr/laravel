@@ -18,7 +18,8 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::group(['prefix' => 'adomin', 'middleware' => 'auth'], function () {
+Route::group(['prefix'     => 'adomin',
+              'middleware' => 'auth'], function () {
 
   Route::get('ok', function () {
     return 'Oki';
@@ -42,18 +43,19 @@ Route::get('salut/slug-{name}-{id}', function ($slug, $id) {
 });
 Maintenant, essai sans slug dans la route
 */
-Route::get('salut/{slug}-{id}', ['as' => 'salut', function ($slug, $id) {
-  //  return ('Lien: /salut/' . $slug . '-' . $id );
+Route::get('salut/{slug}-{id}', ['as' => 'salut',
+                                 function ($slug, $id) {
+                                   //  return ('Lien: /salut/' . $slug . '-' . $id );
 
-  // Comme route nommée avec as:
-  return ('Lien: ' . route('salut', ['slug' => 'le-lien-est-' . $slug, 'id' => $id]));
+                                   // Comme route nommée avec as:
+                                   return ('Lien: ' . route('salut', ['slug' => 'le-lien-est-' . $slug,
+                                                                      'id'   => $id]));
 
-}])->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
+                                 }])->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
 
 
-Route::get('salut/{name}', function ($name) {
-  return ('Salut, ' . ucfirst($name) . ' !');
-});
+Route::get('salut/{name}', 'HelloController@hello')
+->name('hello');
 
 
 // Là où j'en suis... (Lionel)
