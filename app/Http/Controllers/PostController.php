@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequest;
 use \App\Post;
-use Illuminate\Http\Request;
 
 class PostController extends Controller {
 
@@ -14,7 +14,7 @@ class PostController extends Controller {
     return view('posts/index', ['posts' => $posts]);
   }
 
-  public function store(Request $request) {
+  public function store(PostRequest $request) {
 
     Post::create($request->only('name', 'content'));
     return redirect()->route('posts.index');
