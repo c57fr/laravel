@@ -12,7 +12,7 @@
                 {{--<h2>{{$post->name}}</h2>--}}
                 {{--<p>{{$post->content}}</p>--}}
                 {{$post->name}}
-                <a href=" {{ route('posts.edit', $post->id) }}">Editer</a>
+                <a href=" {{ route('posts.edit', $post->id) }}">Éditer</a>
             </li>
         @endforeach
     </ul>

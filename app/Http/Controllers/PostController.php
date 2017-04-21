@@ -15,7 +15,7 @@ class PostController extends Controller {
   }
 
   public function store(PostRequest $request) {
-    
+
     Post::create($request->only('name', 'content'));
     return redirect()->route('posts.index');
   }
