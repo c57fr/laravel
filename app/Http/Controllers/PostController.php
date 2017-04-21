@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use \App\Post;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 
 class PostController extends Controller {
@@ -27,7 +27,7 @@ class PostController extends Controller {
     return view('posts/edit', ['post' => $post]);
   }
 
-  public function update(Request $request, $id) {
+  public function update(PostRequest $request, $id) {
 
     $post = Post::find($id);
     $post->update($request->only('name', 'content'));

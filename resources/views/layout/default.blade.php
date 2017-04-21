@@ -7,16 +7,16 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Site d'entraînement">
     <meta name="author" content="GC7">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="/../../favicon.ico">
 
     <title>@yield('titre')</title>
 
     <!-- Bootstrap core CSS -->
     {{--<link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">--}}
-    <link href="../css/app.min.css" rel="stylesheet">
+    <link href="/../css/app.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../css/gc7.min.css" rel="stylesheet">
+    <link href="/../css/gc7.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li class="active"><a href="salut/lionel">Salut</a></li>
+                <li class="active"><a href="/salut/lionel">Salut</a></li>
                 <li><a href="/posts">Posts</a></li>
                 <!--
                 <li><a href="#contact">Contact</a></li>
@@ -88,7 +88,7 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 {{--<script src="../../assets/dist/js/bootstrap.min.js"></script>--}}
 <script src="/js/app.js"></script>
 </body>
