@@ -1,11 +1,11 @@
 @extends('layout/default')
 
 @section('titre')
-    Edition Post
+    Édition Post
 @endsection
 
 @section('contenu')
-    <h1>Editer {{$post->name}}</h1>
+    <h1>Éditer {{$post->name}}</h1>
 
     <form action="{{ route('posts.update', $post->id) }}" method="POST">
         {{csrf_field()}}
