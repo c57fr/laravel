@@ -30,9 +30,12 @@ N.B.: Pour activer SSL, décommenter les 2 lignes qui suivent " # Force SSL " da
 - https://openclassrooms.com/courses/decouvrez-le-framework-php-laravel-1
 - https://www.grafikart.fr/formations/laravel/routes
 
-## Outils conseillés
-- SublimeText 3
-- ungit
+Outils conseillés:
+-
+
+- [Sublime Text 3](https://www.sublimetext.com) & [Package Manager](https://packagecontrol.io/browse)
+- [ungit](http://dbottiau.azurewebsites.net/utiliser-git-facilement-avec-ungit) ou [GitKraken](https://www.gitkraken.com/)
+- [Extension LivePage](https://chrome.google.com/webstore/detail/livepage/pilnojpmdoofaelbinaeodfpjheijkbh?hl=fr) (Chromium ([Win](https://chromium.woolyss.com/download/fr/)/[Linux](http://www.linuxpedia.fr/doku.php/lmde/les_outils_specifiques_a_mint#le_gestionnaire_de_logiciels_mintinstall))
 
 ##### -------------------------------------------------------------------------------------------------------------------------------------------------
 
