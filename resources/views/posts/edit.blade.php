@@ -6,7 +6,7 @@
 
 @section('contenu')
     <h1>Éditer {{$post->name}}</h1>
-
+    <p>Catégorie: {{$post->category->name}}</p>
     <form action="{{ route('posts.update', $post->id) }}" method="POST">
         {{csrf_field()}}
         <input type="hidden" name="_method" value="put">

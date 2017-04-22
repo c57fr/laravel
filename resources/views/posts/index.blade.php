@@ -12,9 +12,8 @@
         @foreach($posts as $post)
             <li>
                 {{--<h2>{{$post->name}}</h2>--}}
-                {{--<p>{{$post->content}}</p>--}}
-                {{ucfirst($post->name)}} dans la catégorie {{$post->category_id}}
-                {{--{{$post->category->name}}--}}
+                {{--                <p>{{$post->content}}</p>--}}
+                {{ucfirst($post->name)}} dans la catégorie {{$post->category->name}}
                 {{--                {{dd($post)}}--}}
                 <a href=" {{ route('posts.edit', $post->id) }}">Éditer</a>
             </li>

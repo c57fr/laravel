@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use \App\Post;
 use App\Http\Requests\PostRequest;
 
@@ -11,7 +12,8 @@ class PostController extends Controller {
 
     //$posts = Post::orderBy('name')->get();
     // Equivaut à: $posts = (new Post())->newQuery()->get(['*']);
-    $posts       = Post::all();
+    //    $posts = Post::where('id', '>=', '2')->get(['name', 'category_id']);
+    $posts = Post::with('category')->get();
     return view('posts/index', ['posts' => $posts]);
 
   }
@@ -24,7 +26,7 @@ class PostController extends Controller {
   }
 
   public function edit(Post $post) {
-
+    
     return view('posts/edit', ['post' => $post]);
 
   }
