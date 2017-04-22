@@ -1,7 +1,7 @@
 @extends('layout/default')
 
 @section('titre')
-    Édition Post
+    Édition d'Article
 @endsection
 
 @section('contenu')

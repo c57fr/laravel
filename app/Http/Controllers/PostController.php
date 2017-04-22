@@ -9,28 +9,31 @@ class PostController extends Controller {
 
   public function index() {
 
-    $posts = Post::orderBy('name')->get();
+    //$posts = Post::orderBy('name')->get();
     // Equivaut à: $posts = (new Post())->newQuery()->get(['*']);
+    $posts = Post::all();
     return view('posts/index', ['posts' => $posts]);
+
   }
 
   public function store(PostRequest $request) {
 
     Post::create($request->only('name', 'content'));
     return redirect()->route('posts.index');
+
   }
 
-  public function edit($id) {
+  public function edit(Post $post) {
 
-    $post = Post::find($id);
     return view('posts/edit', ['post' => $post]);
+
   }
 
-  public function update(PostRequest $request, $id) {
+  public function update(PostRequest $request, Post $post) {
 
-    $post = Post::find($id);
     $post->update($request->only('name', 'content'));
     return redirect()->route('posts.index');
+    
   }
 
 }

@@ -86,4 +86,5 @@ Route::get('facture/{n}', function ($n) {
   return view('documents/facture')->withNumero($n);
 })->where('n', '[0-9]+');
 
+
 Route::resource('posts', 'PostController', ['only'=>['index','store', 'update', 'edit']]);
