@@ -11,7 +11,7 @@ class PostController extends Controller {
 
     //$posts = Post::orderBy('name')->get();
     // Equivaut à: $posts = (new Post())->newQuery()->get(['*']);
-    $posts = Post::all();
+    $posts       = Post::all();
     return view('posts/index', ['posts' => $posts]);
 
   }
