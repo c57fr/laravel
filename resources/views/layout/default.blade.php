@@ -44,7 +44,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
                 <li class="active"><a href="/salut/lionel">Salut</a></li>
-                <li><a href="/posts">Posts</a></li>
+                <li><a href="/posts">Articles</a></li>
                 <!--
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">

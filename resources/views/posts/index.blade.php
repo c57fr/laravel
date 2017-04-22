@@ -1,17 +1,21 @@
 @extends('layout/default')
 
 @section('titre')
-    Mes posts
+    Mes articles
 @endsection
 
 @section('contenu')
-    <h1>Posts</h1>
+
+    <h1>Articles</h1>
+
     <ul>
         @foreach($posts as $post)
             <li>
                 {{--<h2>{{$post->name}}</h2>--}}
                 {{--<p>{{$post->content}}</p>--}}
-                {{$post->name}}
+                {{ucfirst($post->name)}} dans la catégorie {{$post->category_id}}
+                {{--{{$post->category->name}}--}}
+                {{--                {{dd($post)}}--}}
                 <a href=" {{ route('posts.edit', $post->id) }}">Éditer</a>
             </li>
         @endforeach

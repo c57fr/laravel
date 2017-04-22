@@ -151,8 +151,9 @@
             <a href="https://forge.laravel.com" target="_blank">Forge</a>
         </div>
         <hr/>
-        <p class="links">Dépôt Git: <a href="https://github.com/c57fr/laravel" title="Ouverture du dépôt Git
-  dans un autre onglet">https://github.com/c57fr/laravel</a></p>
+        <p class="links">Dépôt Git: <a href="https://github.com/c57fr/laravel"
+                                       title="Ouverture du dépôt Git dans un autre onglet">https://github.com/c57fr/laravel</a>
+        </p>
     </div>
 </div>
 
