@@ -5,5 +5,5 @@
 @endsection
 
 @section('contenu')
-    <h1>Salut, {{$name}} !</h1>
+    <h1>Salut, <b>{{$name}}</b> !</h1>
 @endsection

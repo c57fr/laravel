@@ -37,12 +37,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Laravel</a>
+            <a class="navbar-brand" href="/">Laravel</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li class="active"><a href="/salut/lionel">Salut</a></li>
+                {{--<li><a href="/">Home</a></li>--}}
+                <li class="active"><a href="/salut/amigo">Salut</a></li>
                 <li><a href="/posts">Articles</a></li>
                 <!--
                 <li><a href="#contact">Contact</a></li>
@@ -62,7 +62,18 @@
                 -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <!--
+                @if (Route::has('login'))
+                    <div class="top-right links">
+                        @if (Auth::check())
+                            <a href="{{ url('/home') }}">Home</a>
+                        @else
+                            <a href="{{ url('/login') }}">Login</a>
+                            <a href="{{ url('/register') }}">Register</a>
+                        @endif
+                    </div>
+                    @endif
+
+                            <!--
                 <li><a href="../navbar/">Default</a></li>
                 <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
                 <li><a href="../navbar-fixed-top/">Fixed top</a></li>
