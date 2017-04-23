@@ -13,7 +13,7 @@
             <li>
                 {{--<h2>{{$post->name}}</h2>--}}
                 {{--                <p>{{$post->content}}</p>--}}
-                {{ucfirst($post->name)}} dans la catégorie {{$post->category->name}}
+                {{ucfirst($post->name)}} dans la catégorie {{$post->cat}}
                 {{--                {{dd($post)}}--}}
                 <a href=" {{ route('posts.edit', $post->id) }}">Éditer</a>
             </li>

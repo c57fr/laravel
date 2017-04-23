@@ -13,8 +13,11 @@ class PostController extends Controller {
 
   public function index() {
 
-    $posts = POST::with('category')
-                 ->get();
+    $posts = DB::table('posts as p')
+               ->select('p.*', 'c.name as cat')
+               ->leftJoin('categories as c', 'p.category_id', '=', 'c.id')
+               ->get();
+
     \Debugbar::info($posts);
     return view('posts/index', ['posts' => $posts]);
 
@@ -28,7 +31,7 @@ class PostController extends Controller {
   }
 
   public function edit(Post $post) {
-    
+
     return view('posts/edit', ['post' => $post]);
 
   }
@@ -37,7 +40,7 @@ class PostController extends Controller {
 
     $post->update($request->only('name', 'content'));
     return redirect()->route('posts.index');
-    
+
   }
 
   public function tests() {
@@ -169,14 +172,55 @@ class PostController extends Controller {
     //                ->get();
 
     //INSERTION
-    DB::table('users')
-      ->truncate();
-    $t = DB::table('users')
-           ->insertGetId([
-                           'email'    => 'john@example.com',
-                           'name'     => 'Lionel',
-                           'password' => '123'
-                         ]);
+    //    DB::table('users')
+    //      ->truncate();
+
+    //    $t = DB::table('users')
+    //           ->insertGetId([
+    //                           'email'    => 'john@example.com',
+    //                           'name'     => 'Lionel',
+    //                           'password' => '123'
+    //                         ]);
+
+
+    /*
+        // UPDATE
+        DB::table('users')
+          ->where('id', 1)
+          ->update(['email' => 456]);
+    */
+
+
+    // INCREMENT - DECREMENT
+    //    DB::table('users')
+    //      ->where('id', 1)
+    //      ->increment('password', 100);
+
+
+    /*
+        // DELETE
+        DB::table('users')
+          ->where('password', '>', 1000)
+          ->delete();
+    */
+
+    /*
+        // TRUNCATE
+        DB::table('users')
+          ->truncate();
+    */
+
+
+    // $t = DB::table('users')->where('passsword', '>', 100)->sharedLock()->get(); // Bloque accès lecture + écriture le tps de l'opération
+    //    $t = DB::table('users')//           ->where('password', '>', 1000)
+    //           ->lockForUpdate()
+    //           ->get(); // Bloque accès écriture le tps de l'opération
+
+
+    $t = DB::table('users')//           ->where('password', '>', 1000)
+           ->lockForUpdate()
+           ->paginate(3);
+    //           ->get(); // Bloque accès écriture le tps de l'opération
 
 
     //    $t = 777;
@@ -189,7 +233,8 @@ class PostController extends Controller {
     //    \Debugbar::disable();
     return view('posts/tests', [
       //      'posts' => $posts,
-      'maVar' => $maVar
+      'elements'  => $maVar,
+      'paginator' => $t
     ]);
 
   }
