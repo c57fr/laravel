@@ -33,5 +33,7 @@
         </div>
         <button class="btn btn-primary">Sauvegarder</button>
     </form>
+    <hr>
+    <p><a href="posts/tests">Tests</a></p>
 @endsection
 
