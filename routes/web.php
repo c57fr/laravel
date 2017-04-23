@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::group([
-               'prefix' => 'adomin',
+               'prefix' => 'admin',
                'middleware' => 'auth'
              ], function () {
 
@@ -106,3 +106,7 @@ Route::resource('posts', 'PostController', [
 ]);
 
 Route::get('posts/tests', 'PostController@tests');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
