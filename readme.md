@@ -12,7 +12,7 @@
 
 # Installation
  En mode console, dans votre dossier www de votre serveur local (wamp, lampp, etc....) :
-## 1/ git clone https://github.com/c5fr/laravel
+## 1/ git clone https://github.com/c5fr/laravel.git
 N.B.: Sous linux, donner les **droits en écriture aux  fichiers et dossiers contenus dans le dossier bootstrap/cache/ et storage/**
 ## 2/ cd laravel
 ## 3/ composer update
