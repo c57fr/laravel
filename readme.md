@@ -23,6 +23,21 @@ N.B.: Sous linux, donner les **droits en écriture aux  fichiers et dossiers con
 ## ===> Avec votre navigateur, visiter le dossier correspondant
  (*En principe:* http://localhost/laravel/public )
 
+
+## 6/ Avec phpMyAdmin de votre serveur local, créer un BdD et renseigner le .env à la racine de votre site selon les paramètres adaptés.
+
+(Exemple: laravel / root / '')
+
+## Lancer en console:
+## php artisan migrate:refresh --seed
+ pour utiliser ainsi les fichiers situés dans database/migrations et database/seeds
+
+Ceci rendra fonctionnel la partie /posts (Articles)
+
+## php artisan make:auth
+Pour pouvoir utiliser le back-end (Login et register).
+
+
 N.B.: Pour activer SSL, décommenter les 2 lignes qui suivent " # Force SSL " dans le .htaccess de la racine (En ce cas, faites pointer votre virtual host local directement dans public/).
 
 
