@@ -18,8 +18,9 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+// Oblige d'être logué pour aller sur page ok
 Route::group([
-               'prefix' => 'admin',
+               'prefix'     => 'admin', // A supprimer pour obliger
                'middleware' => 'auth'
              ], function () {
 
@@ -57,10 +58,13 @@ Route::get('salut/{slug}-{id}', [
       ]));
 
   }
-])->where('slug', '[a-z0-9\-]+')->where('id', '[0-9]+');
+])
+     ->where('slug', '[a-z0-9\-]+')
+     ->where('id', '[0-9]+');
 
 
-Route::get('salut/{name}', 'HelloController@hello')->name('hello');
+Route::get('salut/{name}', 'HelloController@hello')
+     ->name('hello');
 
 
 // Là où j'en suis... (Lionel)
@@ -80,7 +84,8 @@ Route::get('test1', function () {
   //    return [1,2,3]; // Retourne du JSON
   //  return response('un test', 206)->header('Content-Type', 'text/plain'); // Retourne un code partiel
   return view('vue1');
-})->name('test');
+})
+     ->name('test');
 
 // Différentes façons d'envoyer un paramètre à une vue
 
@@ -88,12 +93,14 @@ Route::get('article/{n}', function ($n) {
   //  return view('documents/article')->with('numero', $n);
   //  return view('documents/article', ['numero' => $n]);
   return view('documents/article')->withNumero($n);
-})->where('n', '[0-9]+');
+})
+     ->where('n', '[0-9]+');
 
 
 Route::get('facture/{n}', function ($n) {
   return view('documents/facture')->withNumero($n);
-})->where('n', '[0-9]+');
+})
+     ->where('n', '[0-9]+');
 
 
 Route::resource('posts', 'PostController', [
