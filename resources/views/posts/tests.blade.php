@@ -7,6 +7,7 @@
 @section('contenu')
 
     <h1>Test DB::<em>functions()</em></h1>
+    <p><em>Éxaminer PostController@tests...</em></p>
 
     <!-- <pre><?php // print_r($maVar)
     ?></pre> -->
