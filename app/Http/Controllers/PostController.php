@@ -172,14 +172,14 @@ class PostController extends Controller {
     DB::table('users')
       ->truncate();
     $t = DB::table('users')
-      ->insertGetId([
-                 'email'    => 'john@example.com',
-                 'name'     => 'Lionel',
-                 'password' => '123'
-               ]);
+           ->insertGetId([
+                           'email'    => 'john@example.com',
+                           'name'     => 'Lionel',
+                           'password' => '123'
+                         ]);
 
 
-//    $t = 777;
+    //    $t = 777;
     //    echo 'Nom: ' . $t->name;
     \debug($t);
 
