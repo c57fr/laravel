@@ -24,7 +24,7 @@ N.B.: Sous linux, donner les **droits en écriture aux  fichiers et dossiers con
  (*En principe:* http://localhost/laravel/public )
 
 
-## 6/ Avec phpMyAdmin de votre serveur local, créer un BdD et renseigner le .env à la racine de votre site selon les paramètres adaptés.
+## 6/ Avec phpMyAdmin de votre serveur local, créer une BdD et renseigner le .env (créé lors de l'étape 4 à la racine de votre site) selon les paramètres adaptés.
 
 (Exemple: laravel / root / '')
 
