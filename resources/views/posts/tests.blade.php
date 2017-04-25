@@ -17,8 +17,8 @@
             <li>
                 {{--                <h2>{{dd($posts)}}</h2>--}}
 
-                <h1>{{$mv->id}}</h1>
-                <p>{{$mv->password}}</p>
+                <h1>{{$mv->name}}</h1>
+                <p>{{$mv->email}}</p>
 
                 {{--                <p>{{$post->content}}</p>--}}{{--
                 --}}{{--{{ucfirst($post->name)}} dans la catégorie--}}{{--
