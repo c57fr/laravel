@@ -20,7 +20,8 @@ Route::get('/', function () {
 
 // Oblige d'être logué pour aller sur page ok
 Route::group([
-               'prefix'     => 'admin', // A supprimer pour obliger
+               'prefix'     => 'admin',
+               // A supprimer pour obliger
                'middleware' => 'auth'
              ], function () {
 
@@ -117,3 +118,17 @@ Route::get('posts/tests', 'PostController@tests');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('projects', 'ProjectsController@index')
+     ->name('projects.index');
+
+Route::resource('projects . tasks', 'TasksController');
+Route::bind('tasks', function ($value, $route) {
+  return App\Task::whereSlug($value)
+                 ->first();
+});
+Route::bind('projects', function ($value, $route) {
+  return App\Project::whereSlug($value)
+                    ->first();
+});
