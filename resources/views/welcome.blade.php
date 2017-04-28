@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ config('app.locale') }}">
 <head>
     <base href="https://laravel.c57.fr/"/>
