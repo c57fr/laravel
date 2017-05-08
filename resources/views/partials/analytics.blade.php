@@ -1,14 +1,3 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>@yield('titre')</title>
-</head>
-<body>
-Partie commune du template
-@yield('contenu')
-
-
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -25,8 +14,3 @@ Partie commune du template
   ga('create', 'UA-61289532-2', 'auto');
   ga('send', 'pageview');
 </script>
-
-@include('partials.analytics')
-
-</body>
-</html>
