@@ -15,6 +15,7 @@
 //URL::forceScheme('https');
 
 Route::get('/', function () {
+
   return view('welcome');
 });
 
@@ -26,17 +27,19 @@ Route::group([
              ], function () {
 
   Route::get('ok', function () {
+
     return 'Oki';
   });
 
   Route::get('', function () {
+
     return 'Ajouter "/ok" à l\'URL';
   });
-
 });
 
 
 Route::get('salut', function () {
+
   return 'Salut les gens ! (GA)';
 });
 
@@ -50,6 +53,7 @@ Maintenant, essai sans slug dans la route
 Route::get('salut/{slug}-{id}', [
   'as' => 'salut',
   function ($slug, $id) {
+
     //  return ('Lien: /salut/' . $slug . '-' . $id );
 
     // Comme route nommée avec as:
@@ -57,7 +61,6 @@ Route::get('salut/{slug}-{id}', [
         'slug' => 'le-lien-est-' . $slug,
         'id'   => $id
       ]));
-
   }
 ])
      ->where('slug', '[a-z0-9\-]+')
@@ -81,16 +84,18 @@ Route::get('salut/{name}', 'HelloController@hello')
 // Autre que get: post, put, delete
 
 Route::get('test1', function () {
+
   //    return 'Je suis une page de test'; // Retourne une chaîne
   //    return [1,2,3]; // Retourne du JSON
   //  return response('un test', 206)->header('Content-Type', 'text/plain'); // Retourne un code partiel
   return view('vue1');
 })
-     ->name('test');
+     ->name('test1');
 
 // Différentes façons d'envoyer un paramètre à une vue
 
 Route::get('article/{n}', function ($n) {
+
   //  return view('documents/article')->with('numero', $n);
   //  return view('documents/article', ['numero' => $n]);
   return view('documents/article')->withNumero($n);
@@ -99,6 +104,7 @@ Route::get('article/{n}', function ($n) {
 
 
 Route::get('facture/{n}', function ($n) {
+
   return view('documents/facture')->withNumero($n);
 })
      ->where('n', '[0-9]+');
@@ -125,10 +131,14 @@ Route::get('projects', 'ProjectsController@index')
 
 Route::resource('projects . tasks', 'TasksController');
 Route::bind('tasks', function ($value, $route) {
+
   return App\Task::whereSlug($value)
                  ->first();
 });
 Route::bind('projects', function ($value, $route) {
+
   return App\Project::whereSlug($value)
                     ->first();
 });
+
+Route::get('test', 'HomeController@test');
