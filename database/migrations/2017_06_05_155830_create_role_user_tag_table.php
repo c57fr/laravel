@@ -12,7 +12,7 @@ class CreateRoleUserTagTable extends Migration {
    * @return void
    */
   public function up() {
-
+    
     Schema::create('role_user_tag', function (Blueprint $table) {
 
       $table->increments('id');

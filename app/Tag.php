@@ -8,6 +8,6 @@ class Tag extends Model {
 
   public function role_users() {
 
-    $this->belongsToMany('App\RoleUser');
+    return $this->belongsToMany('App\RoleUser');
   }
 }

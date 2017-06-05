@@ -33,10 +33,12 @@ class User extends Authenticatable {
 
   public function roles() {
 
-    $this->belongsToMany('App\Role');
+    return $this->belongsToMany('App\Role');
   }
+
+
   public function role_users() {
 
-    $this->hasMany('App\RoleUser');
+    return $this->hasMany('App\RoleUser');
   }
 }

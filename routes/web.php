@@ -142,3 +142,4 @@ Route::bind('projects', function ($value, $route) {
 });
 
 Route::get('test', 'HomeController@test');
+Route::get('manyToMany', 'HomeController@manyToMany');
